@@ -13,6 +13,7 @@
 #define UPPER  1
 #define LOWER  2
 #define ADJUST 3
+#define ARROW  4
 
 &soft_off { hold-time-ms = <2000>; };
 
@@ -74,7 +75,7 @@
                 &kp TAB     &kp Q       &kp W       &kp E       &kp R       &kp T                 &kp UP               &kp Y       &kp U       &kp I       &kp O       &kp P        &kp BSPC
                 &kp ESC     &hml LCTRL A &hml LALT S &hml LGUI D &hml LSHFT F &kp G     &kp LEFT  &kp ENTER &kp RIGHT  &kp H       &hmr RSHFT J &hmr RGUI K &hmr RALT L &hmr RCTRL SEMI &kp BSLH
                 &kp LCTRL   &kp Z       &kp X       &kp C       &kp V       &kp B     &kp C_MUTE   &kp DOWN             &kp N       &kp M       &kp COMMA   &kp DOT     &kp SLASH    &kp ENTER
-                                                    &none       &mo LOWER   &none                                      &mo UPPER   &lt UPPER SPACE   &none
+                                                    &none       &mo LOWER   &mo ARROW                                  &mo UPPER   &lt UPPER SPACE   &none
             >;
         };
 
@@ -97,6 +98,17 @@
                 &trans    &kp F1   &kp F2   &kp F3   &kp F4   &kp F5      &trans     &trans    &trans     &kp F6    &kp UNDER &kp PLUS &kp LBRC &kp RBRC &kp DQT
                 &trans    &kp F7   &kp F8   &kp F9   &kp F10  &kp F11     &trans     &trans               &kp F12   &trans   &trans    &trans   &trans   &trans
                                                      &trans   &trans      &trans                                    &mo ADJUST &trans    &trans
+            >;
+        };
+
+        arrow_layer { // Layer 4 - vim-style arrows on hjkl
+            display-name = "Arrow";
+
+            bindings = <
+                &trans    &trans   &trans   &trans   &trans   &trans                 &trans               &trans   &trans   &trans   &trans   &trans   &trans
+                &trans    &trans   &trans   &trans   &trans   &trans      &trans     &trans    &trans     &kp LEFT &kp DOWN &kp UP   &kp RIGHT &trans  &trans
+                &trans    &trans   &trans   &trans   &trans   &trans      &trans     &trans               &trans   &trans   &trans   &trans   &trans   &trans
+                                                     &trans   &trans      &trans                                    &trans   &trans   &trans
             >;
         };
 
