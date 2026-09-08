@@ -13,6 +13,7 @@
         display-name = "Layout";
 
         transform = <&default_transform>;
+        sensors = <&left_encoder>;
 
         keys  //                     w   h    x    y     rot    rx    r
             = <&key_physical_attrs 100 100    0   37       0     0     0>
