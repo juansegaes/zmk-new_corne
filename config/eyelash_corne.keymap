@@ -25,6 +25,8 @@
 
 #define LEFT_SIDE_KEYS 0 1 2 3 4 5 13 14 15 16 17 18 28 29 30 31 32 33 34
 #define RIGHT_SIDE_KEYS 7 8 9 10 11 12 22 23 24 25 26 27 36 37 38 39 40 41
+#define LEFT_MOD_KEYS 14 15 16 17
+#define RIGHT_MOD_KEYS 23 24 25 26
 
 / {
     behaviors {
@@ -36,7 +38,7 @@
             quick-tap-ms = <200>;
             require-prior-idle-ms = <100>;
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <RIGHT_SIDE_KEYS>;
+            hold-trigger-key-positions = <RIGHT_SIDE_KEYS LEFT_MOD_KEYS>;
         };
 
         hmr: hrmod_right {
@@ -47,7 +49,7 @@
             quick-tap-ms = <200>;
             require-prior-idle-ms = <100>;
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <LEFT_SIDE_KEYS>;
+            hold-trigger-key-positions = <LEFT_SIDE_KEYS RIGHT_MOD_KEYS>;
         };
 
         rsr_vol: rsr_vol {
